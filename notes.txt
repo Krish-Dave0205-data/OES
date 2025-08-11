@@ -1,0 +1,5 @@
+Problems:-
+refer the js file again as js is not working properly.
+sol. : It is working now
+
+Pending work:

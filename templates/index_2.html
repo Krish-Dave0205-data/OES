@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}
+        EduSmart
+    {% endblock %}
+        </title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+
+<!--header section starts-->
+<header class="header">
+    <section class="flex">
+        <a href="#home" class="logo"><img src="{{ url_for('static', filename='images/navimg.png') }}" alt="Logo"
+> EduSmart
+        </a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="/enroll">Enroll Student</a>
+            <a href="/view_details">View Details</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </section>
+</header>
+<!--header section ends-->
+
+<!--home section starts-->
+<section class="home" id="home">
+    <div class="row">
+        <div class="content">
+            <h3>Edu. <br> <span>Smart</span></h3>
+            <a href="#contact" class="btn">Contact Us</a>
+        </div>
+        <div class="image">
+            <img src="{{ url_for('static', filename='images/homeimg.svg') }}" alt="Welcome Image">
+        </div>
+    </div>
+</section>
+<!--home section ends-->
+
+<!--Counter starts-->
+<section class="count">
+    <div class="box-container">
+        <div class="box">
+            <i class="fas fa-graduation-cap"></i>
+            <div class="content">
+                <h3>150+</h3>
+                <p>courses</p>
+            </div>
+        </div>
+        <div class="box">
+            <i class="fas fa-user-graduate"></i>
+            <div class="content">
+                <h3>1500+</h3>
+                <p>students</p>
+            </div>
+        </div>
+        <div class="box">
+            <i class="fas fa-chalkboard-user"></i>
+            <div class="content">
+                <h3>100+</h3>
+                <p>teachers</p>
+            </div>
+        </div>
+        <div class="box">
+            <i class="fas fa-face-smile"></i>
+            <div class="content">
+                <h3>100%</h3>
+                <p>satisfaction</p>
+            </div>
+        </div> 
+    </div>
+</section>
+<!--Counter ends-->
+
+<!--Courses section starts-->
+<section class="courses" id="courses">
+    <h1 class="heading">our <span>courses</span></h1>
+    <h4 class="association">(exclusive partnership with <span> w3schools)</span></h4>
+    <div class="course-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide">
+                <img src="{{ url_for('static', filename='images/html.png') }}" alt="HTML Tutorial">
+                <h3><a href="https://www.w3schools.com/html/default.asp">Html Tutorial</a></h3>
+                <p>HTML (HyperText Markup Language) is the standard language used to create and structure content on the web. It forms the foundation of most websites and is used to define the layout, text, images, and links of a webpage.</p>
+            </div>
+            <div class="swiper-slide slide">
+                <img src="{{ url_for('static', filename='images/css.png') }}" alt="css Tutorial">
+                <h3><a href="https://www.w3schools.com/css/default.asp">CSS Tutorial</a></h3>
+                <p>CSS (Cascading Style Sheets) is a stylesheet language used to style and design the appearance of HTML elements on a webpage. It controls layout, colors, fonts, spacing, animations, and more.And many more.</p>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="{{ url_for('static', filename='images/js.png') }}" alt="js Tutorial">
+                <h3><a href="https://www.w3schools.com/js/default.asp">JavaScript Tutorial</a></h3>
+                <p> JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.JavaScript is easy to learn.This tutorial will teach you JavaScript from basic to advanced.</p>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="{{ url_for('static', filename='images/c.png') }}" alt="c Tutorial">
+                <h3><a href="https://www.w3schools.com/c/index.php">C language Tutorial</a></h3>
+                <p>C is a general-purpose programming language created by Dennis Ritchie at the Bell Laboratories in 1972.It is a very popular language. The main reason for its popularity is because it is a fundamental language in the field of computer science.</p>
+            </div>            
+
+            <div class="swiper-slide slide">
+                <img src="{{ url_for('static', filename='images/python.png') }}" alt="python Tutorial">
+                <h3><a href="https://www.w3schools.com/python/default.asp">Python Tutorial</a></h3>
+                <p> Python can be used to handle big data and perform complex mathematics.Python can be used for rapid prototyping, or for production-ready software development.Python can connect to database systems.</p>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="{{ url_for('static', filename='images/php.png') }}" alt="php Tutorial">
+                <h3><a href="https://www.w3schools.com/php/default.asp">Php Tutorial</a></h3>
+                <p>
+
+                    PHP (Hypertext Preprocessor) is a popular server-side scripting language designed for web development. It is widely used to create dynamic and interactive web pages by processing data on the server before sending the output to the browser.</p>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="{{ url_for('static', filename='images/reactjs.png') }}" alt="react Tutorial">
+                <h3><a href="https://www.w3schools.com/react/default.asp">React JS Tutorial</a></h3>
+                <p>
+
+                    React is a popular JavaScript library developed by Facebook for building user interfaces, particularly single-page applications. It enables developers to create reusable UI components, making development efficient and maintainable.</p>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            
+
+        </div>
+
+        </div>
+    </div>
+</section>
+<!--Courses section ends-->
+
+<br><br>
+
+<!--About us starts-->
+<section class="about" id="about">
+    <h1 class="heads">About <span>us</span></h1>
+    <div class="swiper about-slide"> <!-- Swiper container -->
+        <div class="swiper-wrapper"> <!-- Corrected swiper-wrapper -->
+
+            <div class="swiper-slide slider"> <!-- Corrected to swiper-slide -->
+                <img src="{{ url_for('static', filename='images/abhay.svg') }}" alt="front_one">
+                <h3>Abhay Verma-Frontend Developer</h3>
+                <p>A Frontend Developer is responsible for creating the visual elements of a website or web application that users interact with. They work with languages like HTML, CSS, and JavaScript to design user-friendly, responsive, and aesthetically pleasing interfaces. Their goal is to ensure a seamless experience for users across various devices and screen sizes.</p>
+            </div>
+            
+            <div class="swiper-slide slider">
+                <img src="{{ url_for('static', filename='images/riddhi.svg') }}" alt="front_two">
+                <h3>Riddhi Sawant-Frontend Developer (JavaScript)</h3>
+                <p>A JavaScript Developer builds interactive web pages using JavaScript. They create dynamic features like forms, animations, and real-time updates, often using frameworks like React or Node.js. Their role focuses on improving user experience through smooth and responsive interactions on websites.</p>
+
+            </div>
+
+            <div class="swiper-slide slider">
+                <img src="{{ url_for('static', filename='images/ashi.svg') }}" alt="front_three">
+                <h3>Ashvi Butani-Frontend Developer (UI Designer)</h3>
+                <p>Keen Frontend developer but also,An UI (User Interface) Designer focuses on the visual aspects of a product's interface, ensuring it is both functional and visually appealing. They design elements like buttons, icons, and menus, working closely with Frontend Developers to make sure the design is implemented correctly. Their role is crucial in creating a cohesive, engaging, and intuitive user experience.
+                </p>
+            </div>
+
+            <div class="swiper-slide slider">
+                <img src="{{ url_for('static', filename='images/me.svg') }}" alt="backend">
+                <h3>Krish Dave-Backend Developer</h3>
+                <p>A Backend Developer is responsible for the server-side logic, databases, and overall functionality that supports the front end of a website or application. They work with languages like Python, Java, and Ruby to build and maintain the infrastructure, ensuring the application runs smoothly, securely, and efficiently behind the scenes.</p>
+            </div>
+
+        </div>
+
+        <!-- Navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- Pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+        <div class="swiper-pagination course-pagination"></div> <!-- For course-slider -->
+        <div class="swiper-pagination about-pagination"></div> <!-- For about-slide -->
+        
+
+    </div>
+</section>
+
+<!--About us ends-->
+
+<br>
+<br>
+
+
+<!--Contact starts-->
+<section class="contact" id="contact">
+
+    <h1 class="heading"><span>Contact</span> us</h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="{{ url_for('static', filename='images/Feedback-bro.svg') }}" alt="react Tutorial">        </div>
+
+        <form action="" method="post" onsubmit="handleSubmit(event)">
+            <span>Your name:</span>
+            <input type="text" required placeholder="enter your fullname" maxlength="50" name="name" class="box">
+            <span>Email:</span>
+            <input type="email" required placeholder="enter your email here" maxlength="50" name="email" class="box">
+            <span>MobileNo:</span>
+            <input type="number" required placeholder="enter mobile number" maxlength="9999999999" min="0" name="number" class="box" onkeypress="if(this.value.length==10) return false;">
+            <span>Select Course:</span>
+            <select name="course" class="box">
+                <option value="" disabled selected>select the course --</option>
+                <option value="Html">Html</option>
+                <option value="css">Css</option>
+                <option value="js">Js</option>
+                <option value="c">C</option>
+                <option value="python">Python</option>
+                <option value="php">Php</option>
+                <option value="reactjs">ReactJS</option>
+            </select>
+            <span>Select Gender</span>
+            <div class="radio">
+                <input type="radio" name="gender" value="male" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" value="female" id="female">
+                <label for="female">Female</label>
+            </div>
+            
+        
+            <!-- <input type="submit" value="Send Us" class="btn" name="send" onclick="alert('Thank you for choosing us!')"> -->
+            <!-- <input type="submit" value="Send Us" class="btn" name="send" 
+       onclick="refreshPage()">
+
+<script>
+    function refreshPage() {
+        alert('Thank you for choosing us!');
+        location.reload(); // Refresh the page
+    }
+</script> -->
+
+<input type="submit" value="Send Us" class="btn" name="send">
+        </form>
+
+        <script>
+            function handleSubmit(event) {
+                event.preventDefault(); // Prevent the form's default submission
+        
+                alert('Thank you for choosing us!');
+                
+                // Refresh the page
+                // location.reload();
+                location.href = "http://127.0.0.1:5000/"
+            }
+        </script>
+    </div>
+
+</section>
+
+<!--Contact ends-->
+
+
+
+<!--footer start-->
+<footer class="footer">
+    <section>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-instagram"></a>
+        </div>
+        <div class="credit">&copy; copyright @2024 by <span>EduSmart</span></div>
+    </section>
+</footer>
+<!--footer ends-->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

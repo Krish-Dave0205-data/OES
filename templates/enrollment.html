@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>EduSmart - Enrollment Form</title>
+    <style>
+        :root {
+            --green: #00E77F;
+            --white: #fff;
+            --light-white: #aaa;
+            --black: #3d3d3d;
+            --light-bg: #4b4b4b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            /* padding: 20px; */
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--green);
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: var(--black);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            
+        }
+        .form-container { text-align: center;}
+        label {
+            font-size: 14px;
+            color: var(--light-white);
+            text-align: left;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: var(--light-bg);
+            border: 1px solid var(--light-white);
+            border-radius: 5px;
+            color: var(--white);
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus, 
+        input[type="email"]:focus, 
+        select:focus {
+            outline: none;
+            border-color: var(--green);
+        }
+
+        select {
+            appearance: none;
+            background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 viewBox%3D%220 0 20 20%22 fill%3D%22%23aaa%22%3E%3Cpath fill-rule%3D%22evenodd%22 d%3D%22M5.293 7.707a1 1 0 011.414 0L10 11.293l3.293-3.586a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z%22 clip-rule%3D%22evenodd%22 /%3E%3C/svg%3E');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 1em;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: var(--green);
+            color: var(--white);
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #00d66a;
+        }
+
+        button:active {
+            background-color: #00b35e;
+        }
+
+        a {
+            color: var(--green);
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <!-- navbar starts -->
+ 
+
+
+    <!-- navbar starts  -->
+
+
+<form action="/enroll" method="post">
+        <h1>Enrollment Form</h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+            <option value="" disabled selected>Select a course</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Python">Python</option>
+            <option value="Php">Php</option>
+            <option value="Reactjs">React JS</option>
+        </select>
+
+        <button type="submit">Enroll</button>
+    </form>
+
+<br>
+<br>
+<hr>
+    <!-- footer starts -->
+     
+
+</body>
+</html>

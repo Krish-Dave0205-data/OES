@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // Get the cookie banner and the accept button
+var cookieBanner = document.getElementById('cookie-banner');
+var acceptButton = document.getElementById('accept-cookies');
+
+// Check if the user has already accepted cookies
+if (!localStorage.getItem('cookiesAccepted')) {
+    // If not, show the cookie banner
+    cookieBanner.style.display = 'block';
+}
+
+// When the user clicks "Accept", hide the banner and store their preference
+acceptButton.onclick = function() {
+    cookieBanner.style.display = 'none';
+    localStorage.setItem('cookiesAccepted', 'true'); // Save the user's consent
+}
+
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Consent</title>
+    <link rel="stylesheet" href="">
+    <style>
+        /* Cookie Consent Banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+}
+
+.cookie-banner a {
+    color: #00E77F;
+    text-decoration: none;
+}
+
+.cookie-banner button {
+    background-color: #00E77F;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.cookie-banner button:hover {
+    background-color: #00d66a;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>This website uses cookies to ensure you get the best experience. <a href="#">Learn more</a></p>
+        <button id="accept-cookies">Accept</button>
+    </div>
+
+    <h1>Welcome to My Website</h1>
+    <p>This is the content of your website.</p>
+
+    <script src=""></script>
+</body>
+</html>
